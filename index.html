@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work From Home - Only For Women</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts (Poppins & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdf2f8',
+              100: '#fce7f3',
+              200: '#fbcfe8',
+              500: '#ec407a',
+              600: '#d81b60',
+              700: '#e91e63',
+              800: '#c2185b',
+            },
+            accent: {
+              yellow: '#fbc02d',
+              yellowLight: '#fff9c4',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Subtle Pulsing Animation for Urgency Cards */
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 3s infinite ease-in-out;
+    }
+
+    /* Custom Floating Graphic Effect */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* Glassmorphism subtle effect */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-pink-100 selection:text-pink-600 pb-20 md:pb-0">
+
+  <!-- Top Navigation Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-pink-100 shadow-sm transition-all duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logo / Brand Badge -->
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-pink-400 flex items-center justify-center text-white shadow-md shadow-pink-200 group-hover:scale-105 transition-transform">
+          <i class="fa-solid font-bold fa-laptop-house text-lg"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-gray-900 text-base md:text-lg tracking-tight block leading-tight">
+            Work From Home
+          </span>
+          <span class="text-xs text-brand-600 font-semibold tracking-wide uppercase block">
+            Women Opportunity
+          </span>
+        </div>
+      </a>
+
+      <!-- Header Action Button -->
+      <button onclick="handleTelegramClick()" class="telegram-link inline-flex items-center gap-2 bg-gradient-to-r from-brand-600 to-pink-500 hover:from-brand-700 hover:to-pink-600 text-white font-medium px-4 py-2 rounded-xl text-sm shadow-md shadow-pink-200 transition-all hover:shadow-lg active:scale-95">
+        <i class="fa-brands fa-telegram text-lg"></i>
+        <span class="hidden sm:inline">Join Telegram</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-pink-50/60 via-white to-white pt-8 pb-12 md:pt-16 md:pb-20">
+    <!-- Decorative background shapes -->
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-pink-200/40 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-24 w-80 h-80 bg-amber-100/50 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text Column -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          
+          <!-- Category Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100/80 border border-pink-200 text-brand-700 text-xs sm:text-sm font-semibold shadow-xs">
+            <span class="inline-block w-2 h-2 rounded-full bg-brand-600 animate-ping"></span>
+            <span>🌸 Work From Home – Only For Women</span>
+          </div>
+
+          <!-- Main Dynamic Headline -->
+          <h1 id="hero-headline" class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight md:leading-tight">
+            Work From Home – Only For Women
+          </h1>
+
+          <!-- Subheadline -->
+          <p id="hero-subheadline" class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 font-normal">
+            Flexible work opportunities you can do from home.
+          </p>
+
+          <!-- Supporting Highlights Strip -->
+          <div class="pt-2 pb-1">
+            <div class="inline-flex flex-wrap justify-center lg:justify-start items-center gap-2 text-xs sm:text-sm text-gray-700 bg-white/80 border border-gray-200 rounded-2xl px-4 py-2.5 shadow-sm">
+              <span id="hero-supporting-text" class="font-medium text-gray-800">
+                Simple work process • Flexible timing • Weekly payment
+              </span>
+            </div>
+          </div>
+
+          <!-- CTA Button Block -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <button onclick="handleTelegramClick()" class="telegram-link w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-brand-600 via-brand-700 to-pink-600 hover:from-brand-700 hover:to-pink-700 text-white font-bold px-8 py-4 rounded-2xl text-base sm:text-lg shadow-lg shadow-pink-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+              <i class="fa-brands fa-telegram text-2xl"></i>
+              <span>Join on Telegram</span>
+              <i class="fa-solid fa-arrow-right text-sm ml-1 opacity-80"></i>
+            </button>
+          </div>
+
+          <p class="text-xs text-gray-500 flex items-center justify-center lg:justify-start gap-1">
+            <i class="fa-solid fa-shield-halved text-emerald-500"></i> Free to join • Instant updates on Telegram channel
+          </p>
+        </div>
+
+        <!-- Hero Graphic Column -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md lg:max-w-none">
+            <!-- Glow background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-pink-300 to-amber-200 rounded-3xl transform rotate-3 scale-95 opacity-60 blur-lg"></div>
+            
+            <!-- Graphic Container Card -->
+            <div class="relative bg-white border border-pink-100 rounded-3xl p-6 sm:p-8 shadow-xl text-center overflow-hidden">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-pink-50 rounded-bl-full -z-0"></div>
+
+              <!-- Vector/SVG WFH Woman Illustration -->
+              <div class="relative z-10 my-4 animate-float">
+                <svg class="w-full h-52 sm:h-64 mx-auto" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Desk & Decor -->
+                  <rect x="40" y="220" width="320" height="12" rx="6" fill="#f3f4f6"/>
+                  <!-- Plant -->
+                  <path d="M70 220 L80 180 L90 220 Z" fill="#34d399"/>
+                  <circle cx="80" cy="180" r="14" fill="#10b981"/>
+                  <rect x="72" y="210" width="16" height="12" rx="2" fill="#d1d5db"/>
+                  <!-- Coffee Mug -->
+                  <rect x="300" y="200" width="18" height="20" rx="3" fill="#f43f5e"/>
+                  <path d="M318 205 C323 205 323 215 318 215" stroke="#f43f5e" stroke-width="3" fill="none"/>
+                  <!-- Laptop -->
+                  <rect x="140" y="160" width="120" height="55" rx="6" fill="#1f2937"/>
+                  <rect x="148" y="168" width="104" height="40" rx="3" fill="#ec407a"/>
+                  <!-- Screen content mockup -->
+                  <line x1="160" y1="180" x2="200" y2="180" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="160" y1="192" x2="230" y2="192" stroke="#fce7f3" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="230" cy="180" r="6" fill="#fef08a"/>
+                  <path d="M120 220 L280 220 L270 215 L130 215 Z" fill="#9ca3af"/>
+                  
+                  <!-- Character Silhouette / Modern Flat Style -->
+                  <!-- Hair -->
+                  <path d="M170 85 C160 50 240 50 230 85 C245 120 235 150 230 160 C210 160 190 160 170 160 C165 150 155 120 170 85 Z" fill="#374151"/>
+                  <!-- Face -->
+                  <circle cx="200" cy="95" r="22" fill="#fbcfe8"/>
+                  <!-- Smile -->
+                  <path d="M194 102 Q200 108 206 102" stroke="#be185d" stroke-width="2" stroke-linecap="round" fill="none"/>
+                  <!-- Outfit -->
+                  <path d="M165 140 C165 125 235 125 235 140 L245 195 C245 200 155 200 155 195 Z" fill="#d81b60"/>
+                  <path d="M185 125 L200 145 L215 125 Z" fill="#fbcfe8"/>
+                </svg>
+              </div>
+
+              <!-- Quick Info Badge inside illustration card -->
+              <div class="relative z-10 bg-amber-50 border border-amber-200 rounded-xl p-3 text-left flex items-center justify-between gap-2 shadow-xs">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-full bg-amber-400 text-gray-900 flex items-center justify-center font-bold text-sm">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs text-gray-600 block leading-tight">Work Environment</span>
+                    <span class="text-xs font-bold text-gray-900 block">100% Home Based</span>
+                  </div>
+                </div>
+                <span class="bg-amber-200 text-amber-900 text-xs font-bold px-2 py-1 rounded-lg">Comfortable</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Income Details Section -->
+  <section class="py-12 bg-white relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+          Income Details
+        </h2>
+        <p class="text-gray-600 mt-2 text-sm sm:text-base">
+          Clear and flexible earning potential designed for women seeking financial independence
+        </p>
+      </div>
+
+      <!-- Income Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        
+        <!-- Weekly Income Card -->
+        <div class="relative bg-gradient-to-b from-amber-50/70 to-white border-2 border-amber-300 rounded-3xl p-6 sm:p-8 shadow-md hover:shadow-lg transition-all text-center group">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-950 font-bold text-xs uppercase tracking-wider px-4 py-1 rounded-full shadow-xs">
+            Weekly Earning
+          </div>
+          <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Estimated Weekly Salary</h3>
+          <div id="income-weekly" class="text-3xl sm:text-4xl font-extrabold text-gray-900 my-2 text-brand-600">
+            ₹15,000
+          </div>
+          <span class="inline-block text-xs text-gray-500 bg-amber-100/60 px-3 py-1 rounded-full">
+            Paid directly on weekly basis
+          </span>
+        </div>
+
+        <!-- Monthly Income Card -->
+        <div class="relative bg-gradient-to-b from-pink-50/70 to-white border-2 border-pink-300 rounded-3xl p-6 sm:p-8 shadow-md hover:shadow-lg transition-all text-center group">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-600 text-white font-bold text-xs uppercase tracking-wider px-4 py-1 rounded-full shadow-xs">
+            Monthly Potential
+          </div>
+          <div class="w-14 h-14 bg-pink-100 text-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Estimated Monthly Salary</h3>
+          <div id="income-monthly" class="text-3xl sm:text-4xl font-extrabold text-gray-900 my-2 text-brand-600">
+            ₹35,000
+          </div>
+          <span class="inline-block text-xs text-gray-500 bg-pink-100/60 px-3 py-1 rounded-full">
+            Based on active task performance
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Mandatory Income Disclaimer Notice -->
+      <div class="mt-8 max-w-2xl mx-auto bg-gray-50 border border-gray-200 rounded-2xl p-4 text-center sm:text-left flex flex-col sm:flex-row items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-gray-200 text-gray-600 shrink-0 flex items-center justify-center text-base">
+          <i class="fa-solid fa-circle-info"></i>
+        </div>
+        <div>
+          <span class="text-xs font-bold text-gray-700 block uppercase tracking-wider">Example / Claimed Figures</span>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Income figures shown are illustrative examples. Income may vary depending on work, eligibility, performance, and other applicable conditions. No guaranteed income claims are made.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Limited Positions Urgency Card Section -->
+  <section class="py-8 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="relative bg-gradient-to-r from-pink-500 via-brand-600 to-pink-600 text-white rounded-3xl p-6 sm:p-10 shadow-xl overflow-hidden text-center">
+        <!-- Background Pattern Decor -->
+        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
+        <div class="absolute -left-10 -top-10 w-48 h-48 bg-amber-300/20 rounded-full blur-2xl"></div>
+
+        <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+          <div class="inline-flex items-center gap-2 bg-amber-400 text-gray-950 font-extrabold text-xs uppercase px-4 py-1.5 rounded-full shadow-md animate-pulse-subtle">
+            <i class="fa-solid fa-fire text-red-600"></i> Limited Recruitment Drive
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            Limited Positions Available
+          </h2>
+
+          <div class="text-xl sm:text-2xl font-bold text-amber-200">
+            Only <span id="candidates-count" class="underline decoration-amber-400 font-black text-white text-3xl">8</span> candidates required right now!
+          </div>
+
+          <p class="text-pink-100 text-sm sm:text-base max-w-lg mx-auto">
+            Applications are accepted on a first-come, first-served basis for eligible female applicants.
+          </p>
+
+          <div class="pt-2">
+            <button onclick="handleTelegramClick()" class="telegram-link inline-flex items-center justify-center gap-3 bg-amber-400 hover:bg-amber-300 text-gray-950 font-extrabold px-8 py-3.5 rounded-xl text-base shadow-lg transition-transform active:scale-95">
+              <i class="fa-brands fa-telegram text-xl text-blue-600"></i>
+              <span>Join Telegram for Details</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-12 bg-gray-50/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+          Why Choose This Opportunity?
+        </h2>
+        <p class="text-gray-600 mt-2 text-sm sm:text-base">
+          Designed specifically to accommodate family responsibilities and personal schedules
+        </p>
+      </div>
+
+      <!-- 4 Responsive Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Benefit 1 -->
+        <div class="bg-white border border-pink-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-pink-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <h3 class="font-bold text-lg text-gray-900 mb-1">Work From Home</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            100% remote. Perform tasks easily from the comfort and safety of your home.
+          </p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="bg-white border border-pink-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <h3 class="font-bold text-lg text-gray-900 mb-1">Flexible Time</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Choose your working hours. Manage domestic tasks alongside your work freely.
+          </p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="bg-white border border-pink-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-money-bill-wave"></i>
+          </div>
+          <h3 class="font-bold text-lg text-gray-900 mb-1">Weekly Payment</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Receive completed task compensation on a predictable weekly payout schedule.
+          </p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="bg-white border border-pink-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3 class="font-bold text-lg text-gray-900 mb-1">Comfortable Environment</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            No commuting hassle or office stress. Work at your own pace surrounded by family.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-brand-600 font-semibold text-xs uppercase tracking-wider">Simple Process</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">
+          How It Works
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base mt-2">Get started in 3 quick and easy steps</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <!-- Step 1 -->
+        <div class="relative bg-pink-50/50 border border-pink-100 rounded-2xl p-6 text-center space-y-3">
+          <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">
+            01
+          </div>
+          <h3 class="text-lg font-bold text-gray-900">Join Telegram</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Click the join button and access our official Telegram community channel.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative bg-amber-50/50 border border-amber-100 rounded-2xl p-6 text-center space-y-3">
+          <div class="w-12 h-12 rounded-full bg-amber-400 text-gray-950 font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">
+            02
+          </div>
+          <h3 class="text-lg font-bold text-gray-900">Get Work Details</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Check the latest work opportunities, guidelines, and instructions shared on Telegram.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative bg-pink-50/50 border border-pink-100 rounded-2xl p-6 text-center space-y-3">
+          <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">
+            03
+          </div>
+          <h3 class="text-lg font-bold text-gray-900">Apply / Follow Steps</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Follow the provided instructions for the available task and start working.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Action Button after process -->
+      <div class="text-center mt-10">
+        <button onclick="handleTelegramClick()" class="telegram-link inline-flex items-center gap-2 text-brand-600 hover:text-brand-800 font-bold text-sm bg-pink-50 hover:bg-pink-100 px-6 py-3 rounded-xl transition-colors">
+          <span>Start Step 01 Now</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Before You Apply (Trust & Safety Guidelines) -->
+  <section class="py-12 bg-slate-900 text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-3 justify-center mb-8">
+        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-shield-heart"></i>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+          Before You Apply
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        
+        <div class="bg-slate-800/80 border border-slate-700 p-5 rounded-2xl flex items-start gap-3">
+          <i class="fa-solid fa-circle-check text-emerald-400 text-lg mt-0.5 shrink-0"></i>
+          <div>
+            <h4 class="font-bold text-sm text-gray-100">Read Details Carefully</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Always carefully read all requirements and guidelines before expressing interest.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/80 border border-slate-700 p-5 rounded-2xl flex items-start gap-3">
+          <i class="fa-solid fa-circle-check text-emerald-400 text-lg mt-0.5 shrink-0"></i>
+          <div>
+            <h4 class="font-bold text-sm text-gray-100">Verify Requirements</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Verify eligibility and work criteria provided on Telegram prior to commitment.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/80 border border-slate-700 p-5 rounded-2xl flex items-start gap-3">
+          <i class="fa-solid fa-user-shield text-amber-400 text-lg mt-0.5 shrink-0"></i>
+          <div>
+            <h4 class="font-bold text-sm text-gray-100">Protect Sensitive Info</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Never share OTPs, banking PINs, passwords, or personal financial credentials.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/80 border border-slate-700 p-5 rounded-2xl flex items-start gap-3">
+          <i class="fa-solid fa-lock text-amber-400 text-lg mt-0.5 shrink-0"></i>
+          <div>
+            <h4 class="font-bold text-sm text-gray-100">Safe Interaction</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Do not make unverified payments. Always verify genuine guidelines carefully.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Notice -->
+      <div class="text-center mt-8 text-xs text-slate-400 border-t border-slate-800 pt-6 max-w-2xl mx-auto">
+        <p>
+          We promote transparent and safe remote work for women. Please review all terms provided in our official channel.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-gray-600 text-sm mt-2">Everything you need to know before joining</p>
+      </div>
+
+      <div class="space-y-3" id="faq-container">
+        
+        <!-- FAQ 1 -->
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+          <button onclick="toggleFaq(1)" class="w-full text-left p-5 font-semibold text-gray-900 flex justify-between items-center gap-4 hover:bg-pink-50/50 transition-colors">
+            <span class="text-sm sm:text-base">1. Who can apply?</span>
+            <i id="faq-icon-1" class="fa-solid fa-chevron-down text-brand-600 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-1" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-3">
+            Any woman looking for flexible work options from home can apply. No prior specialized technical degree is strictly necessary.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+          <button onclick="toggleFaq(2)" class="w-full text-left p-5 font-semibold text-gray-900 flex justify-between items-center gap-4 hover:bg-pink-50/50 transition-colors">
+            <span class="text-sm sm:text-base">2. Is this work from home?</span>
+            <i id="faq-icon-2" class="fa-solid fa-chevron-down text-brand-600 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-2" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-3">
+            Yes, this is 100% remote work from home. You only need a smartphone or computer with internet connectivity.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+          <button onclick="toggleFaq(3)" class="w-full text-left p-5 font-semibold text-gray-900 flex justify-between items-center gap-4 hover:bg-pink-50/50 transition-colors">
+            <span class="text-sm sm:text-base">3. What are the working hours?</span>
+            <i id="faq-icon-3" class="fa-solid fa-chevron-down text-brand-600 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-3" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-3">
+            Working hours are flexible based on your personal availability and convenience throughout the day.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+          <button onclick="toggleFaq(4)" class="w-full text-left p-5 font-semibold text-gray-900 flex justify-between items-center gap-4 hover:bg-pink-50/50 transition-colors">
+            <span class="text-sm sm:text-base">4. How is payment handled?</span>
+            <i id="faq-icon-4" class="fa-solid fa-chevron-down text-brand-600 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-4" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-3">
+            Payments are processed on a weekly schedule upon completion and verification of assigned tasks.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+          <button onclick="toggleFaq(5)" class="w-full text-left p-5 font-semibold text-gray-900 flex justify-between items-center gap-4 hover:bg-pink-50/50 transition-colors">
+            <span class="text-sm sm:text-base">5. Where can I get complete work details?</span>
+            <i id="faq-icon-5" class="fa-solid fa-chevron-down text-brand-600 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-5" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-3">
+            All comprehensive instructions, updates, and daily guidelines are posted in our official Telegram channel.
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+          <button onclick="toggleFaq(6)" class="w-full text-left p-5 font-semibold text-gray-900 flex justify-between items-center gap-4 hover:bg-pink-50/50 transition-colors">
+            <span class="text-sm sm:text-base">6. How do I join?</span>
+            <i id="faq-icon-6" class="fa-solid fa-chevron-down text-brand-600 text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="faq-ans-6" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-3">
+            <p>Click the <button onclick="handleTelegramClick()" class="inline-flex items-center text-brand-600 font-bold hover:underline">Join Telegram</button> button to access the Telegram channel immediately.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      
+      <div>
+        <h3 class="font-display font-bold text-gray-900 text-lg">Work From Home Opportunity</h3>
+        <p class="text-xs text-gray-500 mt-1">Empowering women with flexible remote opportunities</p>
+      </div>
+
+      <!-- Footer CTA -->
+      <div>
+        <button onclick="handleTelegramClick()" class="telegram-link inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-2.5 rounded-xl text-sm shadow-sm transition-colors">
+          <i class="fa-brands fa-telegram text-lg"></i>
+          <span>Join Telegram</span>
+        </button>
+      </div>
+
+      <p class="text-xs text-gray-400 max-w-lg mx-auto leading-relaxed">
+        Information is subject to change. Please verify all details before applying. No guarantees or unverified claims are implied.
+      </p>
+
+      <div class="text-xs text-gray-400 pt-2 border-t border-gray-100">
+        &copy; <span id="year"></span> Work From Home Opportunity. All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bottom Action Bar -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-pink-200 p-3 shadow-lg flex items-center justify-between gap-3">
+    <div class="pl-2">
+      <span class="text-xs font-bold text-gray-900 block leading-tight">Work From Home</span>
+      <span class="text-[10px] text-brand-600 font-medium">Limited Seats</span>
+    </div>
+    <button onclick="handleTelegramClick()" class="telegram-link flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-600 to-pink-600 text-white font-bold py-3 px-4 rounded-xl text-sm shadow-md active:scale-95 transition-transform">
+      <i class="fa-brands fa-telegram text-lg"></i>
+      <span>Join Telegram →</span>
+    </button>
+  </div>
+
+  <!-- JavaScript Configuration & Logic -->
+  <script>
+    /* 
+    ===================================================
+    EASY EDITABLE CONFIGURATION
+    Modify any values below to customize the landing page.
+    ===================================================
+    */
+    const CONFIG = {
+      telegramUrl: "https://t.me/your_channel_name", // Replace with your actual Telegram Channel link
+      weeklyIncome: "₹15,000",
+      monthlyIncome: "₹35,000",
+      candidatesNeeded: 8,
+      headline: "Work From Home – Only For Women",
+      subheadline: "Flexible work opportunities you can do from home.",
+      supportingText: "Simple work process • Flexible timing • Weekly payment"
+    };
+
+    // Global Handler for Telegram Clicks
+    function handleTelegramClick() {
+      if (CONFIG.telegramUrl) {
+        window.open(CONFIG.telegramUrl, '_blank', 'noopener,noreferrer');
+      } else {
+        console.warn("Telegram URL is not configured.");
+      }
+    }
+
+    // Populate Dynamic Content on Load
+    document.addEventListener("DOMContentLoaded", function() {
+      // Set Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Bind dynamic elements from CONFIG object
+      const headlineEl = document.getElementById('hero-headline');
+      if (headlineEl) headlineEl.textContent = CONFIG.headline;
+
+      const subheadlineEl = document.getElementById('hero-subheadline');
+      if (subheadlineEl) subheadlineEl.textContent = CONFIG.subheadline;
+
+      const supportingEl = document.getElementById('hero-supporting-text');
+      if (supportingEl) supportingEl.textContent = CONFIG.supportingText;
+
+      const weeklyEl = document.getElementById('income-weekly');
+      if (weeklyEl) weeklyEl.textContent = CONFIG.weeklyIncome;
+
+      const monthlyEl = document.getElementById('income-monthly');
+      if (monthlyEl) monthlyEl.textContent = CONFIG.monthlyIncome;
+
+      const countEl = document.getElementById('candidates-count');
+      if (countEl) countEl.textContent = CONFIG.candidatesNeeded;
+    });
+
+    // Accordion Toggle Logic
+    function toggleFaq(id) {
+      const ans = document.getElementById(`faq-ans-${id}`);
+      const icon = document.getElementById(`faq-icon-${id}`);
+
+      if (ans.classList.contains('hidden')) {
+        ans.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        ans.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+  </script>
+</body>
+</html>
